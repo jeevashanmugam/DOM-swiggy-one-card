@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: max-content;
+        margin: 0 auto;
+        border: 2px solid #808080;
+        padding: 26px;
+    }
+
+    .img-clsName {
+        display: inline-block;
+        border-radius: 20px;
+        width: 350px;
+    }
+
+    .head-clsName {
+        padding-top: 10px;
+    }
+
+    .para-claName {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+
+    .cls-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid rgb(188, 183, 183);
+        padding-bottom: 10px;
+    }
+
+    .start-p {
+        background-color: green;
+        /* width: max-content; */
+        padding: 2px 16px;
+        color: white;
+    }
+
+    .viewCls {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        margin-top: 10px;
+        color: blue;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+
+    <div class="container"></div>
+
+
+
+    <script>
+
+        let cont = document.querySelector(".container")
+
+        // image tag
+        let image = document.createElement("img")
+        //image.src = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/py9b9lfxb8buvtgpq1kd";
+        image.setAttribute("src", "image/food.jpg")
+        cont.append(image);
+
+        image.classList.add("img-clsName")   // set attribute in image
+
+
+        // h1 tag heading
+        let head = document.createElement("h1");
+        head.innerHTML = "SS Hyderabad Briyani";
+        cont.append(head);
+
+        head.classList.add("head-clsName")   // set attribute in head h1
+
+
+        // p tag para
+        let para = document.createElement("p")
+        para.innerHTML = "Briyani, North Indian, Chinese";
+        cont.append(para)
+
+        para.classList.add("para-claName")   // set attribute in para
+        // console.log(para);
+
+
+
+        // div tag
+        let ratingDiv = document.createElement("div")
+        ratingDiv.classList.add("cls-row") // set attribute in div
+        cont.append(ratingDiv)
+
+
+        // start sec
+        let col1 = document.createElement("p")
+        col1.innerHTML = "&star; 4.3"
+        ratingDiv.append(col1)
+
+        col1.classList.add("start-p")  // set attribute in start sec
+
+        // min sec
+        let col2 = document.createElement("p");
+        col2.innerHTML = "29 MINS"
+        ratingDiv.appendChild(col2)
+
+        // Rs sec
+        let col3 = document.createElement("p");
+        col3.innerHTML = "&#8377; 300 FOR TWO"
+        ratingDiv.appendChild(col3);
+
+        let quickView = document.createElement("a")
+        quickView.innerHTML = "QUICK VIEW";
+        cont.appendChild(quickView)
+
+        quickView.setAttribute("href", "#")
+        quickView.classList.add("viewCls")  // set attribute in start sec
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
